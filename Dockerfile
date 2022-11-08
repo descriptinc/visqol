@@ -8,8 +8,9 @@ RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gp
 RUN apt update && apt -y install bazel git libboost-all-dev
 RUN apt update && apt -y full-upgrade
 RUN pip install numpy
+RUN pip install absl-py
 
 COPY . /visqol
 WORKDIR /visqol
 RUN ls
-RUN bazel test -c opt python:visqol_lib_py_test
+RUN bazel test -c opt python:visqol_lib_py_test --test_output=errors
