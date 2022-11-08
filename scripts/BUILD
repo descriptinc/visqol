@@ -37,7 +37,7 @@ py_binary(
     deps = [
         "//pyglib:resources",
         "//third_party/py/absl:app",
-        "//third_party/visqol/python:visqol_lib_py",
+        "//third_party/visqol/pyvisqol:visqol_lib_py",
     ],
 )
 

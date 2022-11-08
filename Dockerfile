@@ -13,4 +13,4 @@ RUN pip install absl-py
 COPY . /visqol
 WORKDIR /visqol
 RUN ls
-RUN bazel test -c opt python:visqol_lib_py_test --test_output=errors
+RUN bazel test -c opt pyvisqol:visqol_lib_py_test --test_output=errors
